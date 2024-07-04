@@ -39,6 +39,9 @@ You may also want to run the script in the background, to automatically organize
 
 ```
 crontab -e
+```
+
+```
 * * * * * /usr/bin/python3 /path/to/main.py
 ```
 
