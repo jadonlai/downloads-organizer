@@ -1,9 +1,9 @@
 # Downloads Organizer
 
-![GitHub repo size](https://img.shields.io/github/repo-size/scottydocs/README-template.md)
-![GitHub contributors](https://img.shields.io/github/contributors/scottydocs/README-template.md)
-![GitHub stars](https://img.shields.io/github/stars/scottydocs/README-template.md?style=social)
-![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/jadonlai/downloads-organizer)
+![GitHub contributors](https://img.shields.io/github/contributors/jadonlai/downloads-organizer)
+![GitHub stars](https://img.shields.io/github/stars/jadonlai/downloads-organizer?style=social)
+![GitHub forks](https://img.shields.io/github/forks/jadonlai/downloads-organizer?style=social)
 
 Downloads organizer is a simple Python script that allows users to organize their downloads directory into different subdirectories, based on file type.
 
