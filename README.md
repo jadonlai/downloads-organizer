@@ -7,6 +7,8 @@
 
 Downloads organizer is a simple Python script that allows users to organize their downloads directory into different subdirectories, based on file type.
 
+This is done by creating subdirectories labeled `downloads_<filetype>`. Each corresponding directory and file in the downloads directory is then moved to its corresponding subdirectory.
+
 ## Prerequisites
 
 None
@@ -31,6 +33,19 @@ You may need to give execute permissions to the script. To do so, run:
 
 ```
 chmod +x main.py
+```
+
+You may also want to run the script in the background, to automatically organize the downloads directory. On MacOS, you can do this using crontab:
+
+```
+crontab -e
+* * * * * /usr/bin/python3 /path/to/main.py
+```
+
+To verify the task is scheduled:
+
+```
+crontab -l
 ```
 
 ## Contributing to Downloads Organizer

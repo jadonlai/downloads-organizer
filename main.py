@@ -17,7 +17,7 @@ def main() -> None:
     for file in files:
         filepath = os.path.join(DOWNLOADS_PATH, file)
         if os.path.isdir(filepath):
-            if file[:10] != "downloads_":
+            if file[:10] == "downloads_":
                 continue
             if "folder" not in filetypes:
                 filetypes["folder"] = []
