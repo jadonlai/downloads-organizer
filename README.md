@@ -51,4 +51,4 @@ If you want to contact me you can reach me at <jadonlai.314@gmail.com>.
 
 ## License
 
-This project uses the following license: [<MIT License>](https://github.com/jadonlai/downloads-organizer?tab=MIT-1-ov-file).
+This project uses the following license: [MIT License](https://github.com/jadonlai/downloads-organizer?tab=MIT-1-ov-file).
