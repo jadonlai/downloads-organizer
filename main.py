@@ -19,7 +19,7 @@ def main() -> None:
         if os.path.isdir(filepath):
             if file[:10] == "downloads_":
                 if len(os.listdir(filepath)) == 0:
-                    os.rename(filepath, f'empty_{filepath}')
+                    os.rename(filepath, os.path.join(DOWNLOADS_PATH, f'empty_{file}'))
                 continue
             if "folder" not in filetypes:
                 filetypes["folder"] = []
