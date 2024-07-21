@@ -23,8 +23,10 @@ def main() -> None:
                     contents.remove(".DS_Store")
                 if ".localized" in contents:
                     contents.remove(".localized")
-                if len(contents) == 0:
-                    os.rename(filepath, os.path.join(DOWNLOADS_PATH, f"empty_{file}"))
+                if len(contents) == 0 and file[-6:] != "_empty":
+                    os.rename(filepath, os.path.join(DOWNLOADS_PATH, f"{file}_empty"))
+                if len(contents) > 0 and file[-6:] == "_empty":
+                    os.rename(filepath, os.path.join(DOWNLOADS_PATH, f"{file[:-6]}"))
                 continue
             if "folder" not in filetypes:
                 filetypes["folder"] = []
