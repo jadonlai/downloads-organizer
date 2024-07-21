@@ -15,17 +15,22 @@ def main() -> None:
     files.remove(".localized")
 
     for file in files:
-        filepath = os.path.join(DOWNLOADS_PATH, file)
+        filepath: str = os.path.join(DOWNLOADS_PATH, file)
         if os.path.isdir(filepath):
             if file[:10] == "downloads_":
-                if len(os.listdir(filepath)) == 0:
-                    os.rename(filepath, os.path.join(DOWNLOADS_PATH, f'empty_{file}'))
+                contents: list[str] = os.listdir(filepath)
+                if ".DS_Store" in contents:
+                    contents.remove(".DS_Store")
+                if ".localized" in contents:
+                    contents.remove(".localized")
+                if len(contents) == 0:
+                    os.rename(filepath, os.path.join(DOWNLOADS_PATH, f"empty_{file}"))
                 continue
             if "folder" not in filetypes:
                 filetypes["folder"] = []
             filetypes["folder"].append(file)
         elif os.path.isfile(filepath):
-            filetype = file.split('.')[1]
+            filetype: str = file.split('.')[1]
             if filetype not in filetypes:
                 filetypes[filetype] = []
             filetypes[filetype].append(file)
