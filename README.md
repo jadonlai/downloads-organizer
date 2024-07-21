@@ -42,7 +42,7 @@ crontab -e
 ```
 
 ```
-* * * * * /path/to/downloads-organizer/venv/bin/python /path/to/downloads-organizer/main.py
+* * * * * /usr/bin/python /path/to/downloads-organizer/main.py
 ```
 
 To verify the task is scheduled:
